@@ -1,11 +1,12 @@
 function InventoryItem(props) {
     return (
-        console.log(props),
-        <h4 className="inventory-item-name">
-            {props.name}
-        </h4>,
-        <div className="inventory-item-price">
-            {props.price}
+        <div>
+            <h4>
+                {props.name}
+            </h4>
+            <p>
+                {props.price}
+            </p>
         </div>
     )
 }
