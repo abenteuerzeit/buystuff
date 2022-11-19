@@ -10,29 +10,18 @@ class App extends Component {
     }
   }
 
-  // setCounter(counter)
-  // {
-  //   console.log(counter)
-  //   this.setState({clickCounter : counter,})
-  // }
-
-  // setTitle()
-  // {
-  //   console.log(this.title);
-  //   this.title = "New Title";
-  //   console.log(this.title);
-  // }
 
   render() {
     return (
       <div>
         <h1>{this.title}</h1>
-        <hr/>
-          <h2>{this.state.name}</h2>
-          <h2>{this.state.price}</h2>
-        {/* <h3>Clicks:{this.state.clickCounter}</h3>
-        <button onClick={() => this.setCounter(this.state.clickCounter + 1)} >+1</button>
-        <button onClick={() => this.setTitle()} >New Title!</button> */}
+        <h4>{this.state.name}</h4>
+        <div>{this.state.price}</div>
+        
+        <button onClick={() => this.setState({name: "Shirt", price: 10})}>Change</button>
+
+        <input type="text" value={this.state.name} onChange={(e) => this.setState({name: e.target.value})}/>
+        <input type="text" value={this.state.price} onChange={(e) => this.setState({price: e.target.value})}/>
       </div>
     )
   }
